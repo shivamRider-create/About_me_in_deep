@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #080b16;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 9%;
+    background: rgba(8, 11, 22, 0.85);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #ffffff12;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #00e5ff;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.navbar a {
+    color: #b9c0d4;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #00e5ff;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10%;
+    position: relative;
+    background:
+        radial-gradient(circle at 80% 50%, #123b653d, transparent 35%);
+}
+
+.hero-content {
+    max-width: 650px;
+    animation: slideUp 1s ease;
+}
+
+.tag {
+    color: #00e5ff;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 70px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero h1 span,
+.section-title span {
+    background: linear-gradient(90deg, #00e5ff, #8b5cf6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero h2 {
+    color: #b8c1d9;
+    font-size: 22px;
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+.description {
+    color: #929db5;
+    line-height: 1.9;
+    margin-bottom: 30px;
+    max-width: 550px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 30px;
+    background: linear-gradient(90deg, #00bcd4, #6366f1);
+    color: white;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 5px 25px #00e5ff30;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 35px #00e5ff65;
+}
+
+/* HERO CIRCLE */
+
+.hero-circle {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 2px solid #00e5ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 35px #00e5ff40,
+                inset 0 0 35px #00e5ff20;
+    animation: float 4s ease-in-out infinite;
+}
+
+.circle-text {
+    text-align: center;
+}
+
+.circle-text h2 {
+    font-size: 85px;
+    color: #00e5ff;
+    margin: 10px 0;
+}
+
+.circle-text span {
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: #aab7d1;
+}
+
+/* COMMON SECTIONS */
+
+.section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+
+/* ABOUT */
+
+.about {
+    background: #0d1222;
+}
+
+.about-card {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid #ffffff18;
+    background: #151c30;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    border-color: #00e5ff;
+    transform: translateY(-5px);
+}
+
+.about-card h3 {
+    color: #00e5ff;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.about-card p {
+    color: #aab4cc;
+    line-height: 2;
+}
+
+/* INTEREST CARDS */
+
+.interest-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.interest-card {
+    background: #151c30;
+    border: 1px solid #ffffff15;
+    padding: 30px 20px;
+    border-radius: 18px;
+    transition: 0.4s;
+}
+
+.interest-card:hover {
+    transform: translateY(-10px);
+    border-color: #00e5ff;
+    box-shadow: 0 10px 30px #00e5ff15;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.interest-card h3 {
+    color: #00e5ff;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.interest-card p {
+    color: #929db5;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* CONTACT */
+
+.contact {
+    background:
+        radial-gradient(circle at center, #162a4a, #080b16 70%);
+}
+
+.contact p:not(.tag) {
+    color: #aab4cc;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #050710;
+    border-top: 1px solid #ffffff15;
+    color: #8792aa;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* ANIMATIONS */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .interest-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .navbar ul {
+        gap: 16px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 70px 6%;
+    }
+
+    .hero-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .circle-text h2 {
+        font-size: 65px;
+    }
+
+    .section {
+        padding: 75px 6%;
+    }
+
+    .section-title {
+        font-size: 34px;
+    }
+
+    .interest-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card {
+        padding: 25px;
+    }
+}
+
+/* CONTACT PAGE */
+
+.logo {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-page {
+    min-height: 85vh;
+    padding: 90px 10%;
+    text-align: center;
+    background: radial-gradient(
+        circle at center,
+        #162a4a,
+        #080b16 70%
+    );
+}
+
+.contact-intro {
+    color: #aab4cc;
+    margin-bottom: 45px;
+    line-height: 1.8;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto 45px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    background: #151c30;
+    border: 1px solid #ffffff18;
+    padding: 35px 20px;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    border-color: #00e5ff;
+    box-shadow: 0 10px 30px #00e5ff25;
+}
+
+.contact-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.contact-card h2 {
+    color: #00e5ff;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.contact-card p,
+.contact-card a {
+    color: #c5cee0;
+    font-size: 15px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-card a:hover {
+    color: #00e5ff;
+}
+
+@media (max-width: 600px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-page {
+        padding: 70px 6%;
+    }
+}
