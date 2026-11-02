@@ -430,3 +430,101 @@ footer {
         padding: 70px 6%;
     }
 }
+
+/* SOCIAL PROFILES */
+
+.social-heading {
+    font-size: 28px;
+    margin: 65px 0 30px;
+    color: white;
+}
+
+.social-heading span {
+    background: linear-gradient(90deg, #00e5ff, #8b5cf6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.social-container {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.social-card {
+    display: block;
+    padding: 35px 20px;
+    background: #151c30;
+    border: 1px solid #ffffff18;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-10px);
+    border-color: #00e5ff;
+    box-shadow: 0 10px 35px #00e5ff25;
+}
+
+.social-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #00bcd4, #6366f1);
+    color: white;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.social-card h3 {
+    color: #00e5ff;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.social-card p {
+    color: #aab4cc;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.social-link {
+    display: inline-block;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.linkedin:hover {
+    border-color: #0a9be8;
+}
+
+.github:hover {
+    border-color: #a78bfa;
+}
+
+.back-button {
+    margin-top: 20px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .social-container {
+        grid-template-columns: 1fr;
+    }
+
+    .social-heading {
+        font-size: 24px;
+    }
+
+}
